@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="bPQjL9" name="Auditorium Stereo Enhancer" projectType="audioplug"
+              useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1"
+              companyName="Ranx729">
+  <MAINGROUP id="zU4Pny" name="Auditorium Stereo Enhancer">
+    <GROUP id="{1B23D359-3452-FF34-5014-C30670F425B8}" name="Source">
+      <GROUP id="{BC97658D-E761-7333-DB35-484F05872BB8}" name="Component">
+        <FILE id="fGz91z" name="HorizontalMeter.cpp" compile="1" resource="0"
+              file="Source/HorizontalMeter.cpp"/>
+        <FILE id="UTO93e" name="HorizontalMeter.h" compile="0" resource="0"
+              file="Source/HorizontalMeter.h"/>
+        <FILE id="bee9Yi" name="ImagerPad.cpp" compile="1" resource="0" file="Source/ImagerPad.cpp"/>
+        <FILE id="eZGYjA" name="ImagerPad.h" compile="0" resource="0" file="Source/ImagerPad.h"/>
+        <FILE id="pLfnuA" name="RasterComponent.cpp" compile="1" resource="0"
+              file="Source/RasterComponent.cpp"/>
+        <FILE id="ED9xcr" name="RasterComponent.h" compile="0" resource="0"
+              file="Source/RasterComponent.h"/>
+        <FILE id="BOyWtV" name="Thumb.cpp" compile="1" resource="0" file="Source/Thumb.cpp"/>
+        <FILE id="QHyNjy" name="Thumb.h" compile="0" resource="0" file="Source/Thumb.h"/>
+        <FILE id="vp5gJI" name="VerticalGradientMeter.cpp" compile="1" resource="0"
+              file="Source/VerticalGradientMeter.cpp"/>
+        <FILE id="jtbo62" name="VerticalGradientMeter.h" compile="0" resource="0"
+              file="Source/VerticalGradientMeter.h"/>
+        <FILE id="yTJqVE" name="XYPad.cpp" compile="1" resource="0" file="Source/XYPad.cpp"/>
+        <FILE id="EsG8Le" name="XYPad.h" compile="0" resource="0" file="Source/XYPad.h"/>
+      </GROUP>
+      <GROUP id="{34E89D05-7DCF-E25A-74AD-A4B079C34C5F}" name="Parameter">
+        <FILE id="RSuZwI" name="ParameterObject.cpp" compile="1" resource="0"
+              file="Source/ParameterObject.cpp"/>
+        <FILE id="Ez3zYL" name="ParameterObject.h" compile="0" resource="0"
+              file="Source/ParameterObject.h"/>
+        <FILE id="R1xWSA" name="parameterTypes.h" compile="0" resource="0"
+              file="Source/parameterTypes.h"/>
+      </GROUP>
+      <GROUP id="{0D11AA54-9981-2853-6155-7DD66480675A}" name="DSPProcessors">
+        <FILE id="LKAQwX" name="Imager.cpp" compile="1" resource="0" file="Source/Imager.cpp"/>
+        <FILE id="bnierk" name="Imager.h" compile="0" resource="0" file="Source/Imager.h"/>
+      </GROUP>
+      <FILE id="vpuCId" name="PluginStateManager.cpp" compile="1" resource="0"
+            file="Source/PluginStateManager.cpp"/>
+      <FILE id="LHXGng" name="PluginStateManager.h" compile="0" resource="0"
+            file="Source/PluginStateManager.h"/>
+      <FILE id="QAWu3k" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="s9fOLc" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="kh0AWL" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="OCqJAV" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Auditorium Stereo Enhancer"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Auditorium Stereo Enhancer"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
