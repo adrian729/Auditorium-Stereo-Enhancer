@@ -12,12 +12,12 @@ AuditoriumStereoEnhancerAudioProcessorEditor::AuditoriumStereoEnhancerAudioProce
 {
 	addAndMakeVisible(rasterComponent);
 
-	juce::PropertiesFile::Options options;
-	options.applicationName = ProjectInfo::projectName;
-	options.commonToAllUsers = true;
-	options.filenameSuffix = "settings";
-	options.osxLibrarySubFolder = "Application Support";
-	applicationProperties.setStorageParameters(options);
+	//juce::PropertiesFile::Options options;
+	//options.applicationName = ProjectInfo::projectName;
+	//options.commonToAllUsers = true;
+	//options.filenameSuffix = "settings";
+	//options.osxLibrarySubFolder = "Application Support";
+	//applicationProperties.setStorageParameters(options);
 
 
 	if (auto* constrainer = getConstrainer())

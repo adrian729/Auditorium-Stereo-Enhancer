@@ -22,7 +22,7 @@ public:
 private:
 	//==============================================================================
 	static constexpr double ratio{ 2. / 3. };
-	static constexpr int originalWidth{ 1000 };
+	static constexpr int originalWidth{ 1500 };
 	static constexpr int originalHeight{ static_cast<int>(originalWidth * ratio) };
 
 	//==============================================================================
@@ -31,7 +31,7 @@ private:
 
 	//==============================================================================
 	RasterComponent rasterComponent;
-	juce::ApplicationProperties applicationProperties;
+	//juce::ApplicationProperties applicationProperties; // Change this to use APVTS/stateManager --- take care exclude from presets
 
 	//==============================================================================
 	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AuditoriumStereoEnhancerAudioProcessorEditor)

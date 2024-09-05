@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RasterComponent.h"
+#include "CustomSlider.h"
 
 //==============================================================================
 RasterComponent::RasterComponent(
@@ -14,12 +15,12 @@ RasterComponent::RasterComponent(
 		SliderComponent(
 			apvts,
 			stateManager->getParameter(ControlID::blend),
-			juce::Slider::SliderStyle::Rotary
+			juce::Slider::SliderStyle::RotaryVerticalDrag
 		),
 		SliderComponent(
 			apvts,
 			stateManager->getParameter(ControlID::preGain),
-			juce::Slider::SliderStyle::Rotary
+			juce::Slider::SliderStyle::RotaryVerticalDrag
 		),
 		SliderComponent(
 			apvts,
@@ -50,7 +51,7 @@ RasterComponent::RasterComponent(
 		SliderComponent(
 			apvts,
 			stateManager->getParameter(ControlID::postGain),
-			juce::Slider::SliderStyle::Rotary
+			juce::Slider::SliderStyle::RotaryVerticalDrag
 		)
 	},
 	imagerPad(
@@ -63,17 +64,20 @@ RasterComponent::RasterComponent(
 	meterL([&]() { return audioProcessor.getRmsValue(LEFT_CHANNEL); }),
 	meterR([&]() { return audioProcessor.getRmsValue(RIGHT_CHANNEL); })
 {
+	setLookAndFeel(&customLnf);
+
 	addAndMakeVisibleComponents();
 }
 
 RasterComponent::~RasterComponent()
 {
+	setLookAndFeel(nullptr);
 }
 
 //==============================================================================
 void RasterComponent::paint(juce::Graphics& g)
 {
-	g.setGradientFill(juce::ColourGradient{ juce::Colours::darkgrey.brighter(0.2f), getLocalBounds().toFloat().getCentre(), juce::Colours::darkgrey.darker(0.8f), {}, true });
+	g.setGradientFill(juce::ColourGradient{ juce::Colours::white.darker(0.1f), getLocalBounds().toFloat().getCentre(), juce::Colours::white.brighter(0.9f), {}, true });
 	g.fillRect(getLocalBounds());
 
 	const juce::DropShadow dropShadow{ juce::Colours::black.withAlpha(0.5f), 10, {} };

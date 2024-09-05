@@ -2,10 +2,25 @@
 
 <JUCERPROJECT id="bPQjL9" name="Auditorium Stereo Enhancer" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1"
-              companyName="Ranx729">
+              companyName="Ranx729" cppLanguageStandard="20">
   <MAINGROUP id="zU4Pny" name="Auditorium Stereo Enhancer">
     <GROUP id="{1B23D359-3452-FF34-5014-C30670F425B8}" name="Source">
+      <GROUP id="{ED017ED9-C05A-B254-AC77-74FF86BD8621}" name="LookAndFeel">
+        <FILE id="OlTkNv" name="CustomLnf.cpp" compile="1" resource="0" file="Source/CustomLnf.cpp"/>
+        <FILE id="XpVjeO" name="CustomLnf.h" compile="0" resource="0" file="Source/CustomLnf.h"/>
+        <FILE id="w9MNGK" name="LinearSliderLnf.cpp" compile="1" resource="0"
+              file="Source/LinearSliderLnf.cpp"/>
+        <FILE id="w7rlRl" name="LinearSliderLnf.h" compile="0" resource="0"
+              file="Source/LinearSliderLnf.h"/>
+        <FILE id="b0Uw1Z" name="RotarySliderLnf.cpp" compile="1" resource="0"
+              file="Source/RotarySliderLnf.cpp"/>
+        <FILE id="d2mg1H" name="RotarySliderLnf.h" compile="0" resource="0"
+              file="Source/RotarySliderLnf.h"/>
+      </GROUP>
       <GROUP id="{BC97658D-E761-7333-DB35-484F05872BB8}" name="Component">
+        <FILE id="vcU8PK" name="CustomSlider.cpp" compile="1" resource="0"
+              file="Source/CustomSlider.cpp"/>
+        <FILE id="IymeuJ" name="CustomSlider.h" compile="0" resource="0" file="Source/CustomSlider.h"/>
         <FILE id="fGz91z" name="HorizontalMeter.cpp" compile="1" resource="0"
               file="Source/HorizontalMeter.cpp"/>
         <FILE id="UTO93e" name="HorizontalMeter.h" compile="0" resource="0"

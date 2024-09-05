@@ -3,6 +3,8 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 #include "PluginStateManager.h"
+#include "CustomLnf.h"
+#include "CustomSlider.h"
 #include "XYPad.h"
 #include "ImagerPad.h"
 #include "VerticalGradientMeter.h"
@@ -35,7 +37,31 @@ private:
 	APVTS& apvts;
 
 	//==============================================================================
+	Gui::CustomLnf customLnf;
+
+	//==============================================================================
 	using Attachment = APVTS::SliderAttachment;
+
+	//struct SliderComponent
+	//{
+	//	SliderComponent(
+	//		APVTS& apvts,
+	//		juce::RangedAudioParameter* param,
+	//		juce::Slider::SliderStyle style = juce::Slider::SliderStyle::LinearHorizontal
+	//	) :
+	//		slider(style, juce::Slider::TextBoxBelow),
+	//		label(param->getParameterID(), param->getParameterID()),
+	//		attachment(std::make_unique<Attachment>(apvts, param->getParameterID(), slider))
+	//	{
+	//		slider.setTextBoxIsEditable(true);
+	//		//label.setJustificationType(juce::Justification::bottom);
+	//		//label.attachToComponent(&slider, false);
+	//	}
+
+	//	juce::Slider slider;
+	//	juce::Label label;
+	//	std::unique_ptr<Attachment> attachment;
+	//};
 
 	struct SliderComponent
 	{
@@ -44,7 +70,7 @@ private:
 			juce::RangedAudioParameter* param,
 			juce::Slider::SliderStyle style = juce::Slider::SliderStyle::LinearHorizontal
 		) :
-			slider(style, juce::Slider::TextBoxBelow),
+			slider(param->getLabel()),
 			label(param->getParameterID(), param->getParameterID()),
 			attachment(std::make_unique<Attachment>(apvts, param->getParameterID(), slider))
 		{
@@ -53,7 +79,7 @@ private:
 			//label.attachToComponent(&slider, false);
 		}
 
-		juce::Slider slider;
+		Gui::CustomSlider slider;
 		juce::Label label;
 		std::unique_ptr<Attachment> attachment;
 	};
@@ -74,6 +100,8 @@ private:
 	};
 
 	std::array<SliderComponent, SliderID::countSliders> sliders;
+
+	std::array<juce::Slider, 1> testSliders;
 
 	juce::ComboBox imageTypeComboBox;
 	std::unique_ptr<APVTS::ComboBoxAttachment> imageTypeComboBoxAttachment;

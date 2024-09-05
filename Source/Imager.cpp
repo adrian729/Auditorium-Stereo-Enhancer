@@ -2,8 +2,6 @@
 
 #define _USE_MATH_DEFINES
 
-#include <cmath>
-#include <math.h>
 #include "Imager.h"
 
 //==============================================================================
@@ -229,8 +227,8 @@ void Imager::processHaasMidSide(
 	float* rightOutSamples
 )
 {
-	float lpan = center <= 0.f ? 1.f : std::sin((1.f - center) * M_PI_2);
-	float rpan = center >= 0.f ? 1.f : std::sin((1.f + center) * M_PI_2);
+	float lpan = center <= 0.f ? 1.f : std::sin((1.f - center) * juce::MathConstants<float>::halfPi);
+	float rpan = center >= 0.f ? 1.f : std::sin((1.f + center) * juce::MathConstants<float>::halfPi);
 	float coef_S = 1.5f * width;
 
 	for (int i{ 0 }; i < numSamples; i++)
